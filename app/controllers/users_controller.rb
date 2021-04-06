@@ -11,6 +11,7 @@ class UsersController < ApplicationController
 
         if @user 
             login!(@user)
+            redirect_to user_url(@user.id)
         else 
             render :new
         end 
